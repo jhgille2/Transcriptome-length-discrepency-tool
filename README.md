@@ -17,10 +17,11 @@ To start, I need to already have a genome.fa, annotations.gtf, and transcripts.f
 ### Get transcriptome lengths from transcriptome.fa and bam header
 Next, I'll need to get the transcript lengths for both the transcriptome.fa files and bam headers. Here's how I would do that for the transcriptome file:  
 `bioawk -c fastx '{ print $name, length($seq) }' < transcriptome.fa > transcriptome_lengths.txt`  
-And for the bam file: 
+And for the bam file:  
 `samtools view -H sample_Aligned.toTranscriptome.out.bam > bam_lengths.txt`
 
-### Compare transcriptome lengths from the two sources. **I'm still working on automating this step** but the gist is I want to match the sequench names between both files and find the transcripts that have different lengths in the two files and then export these "problem transcripts" to a file that can be used in the next step.
+### Compare transcriptome lengths from the two sources.  
+**I'm still working on automating this step** but the gist is I want to match the sequench names between both files and find the transcripts that have different lengths in the two files and then export these "problem transcripts" to a file that can be used in the next step.
 
 ### Subset the gtf file to exclude the transcripts with different lengths
 Next, I want to remove those problem transcripts from my annotations.gtf file. I can do that with a command like this:
