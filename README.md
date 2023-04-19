@@ -8,7 +8,7 @@ There seems to a problem where sequence lengths the SAM/BAM headers in the align
 And no quant.sf file will be produced. I have found a few [threads on github](https://github.com/COMBINE-lab/salmon/issues/785) or [biostars](https://www.biostars.org/p/486346/) from users who have similar issues, but as far as I can tell, a solution to the problem has not been implemented in the STAR or salmon software as of the the time of writing. The user who had the issue on biostar mentioned that they resolved their issue by comparing transcript sequence lengths in their transcriptome and BAM files and removing the transcripts that had different lengths between the two. I'll use their approach here as it seemed to resolve the issue while only removing a couple transcripts (in the genome files I was using at least)
 
 ## Workflow
-## Required software
+### Required software
 The software I used for this is listed in the environment.yml file in this repository and can be installed with `conda install -f environment.yml`.  
 
 ### Input files
