@@ -1,5 +1,5 @@
 # Transcriptome length discrepency tools
-Some code to (hopefully) help to resolve an issue where sequences in a BAM/SAM header have a different length indicated than what is indicated in both a gtf file and transcriptome file used in a common pipeline.
+Some code to (hopefully) help to resolve an issue where sequences in a BAM/SAM header have a different length indicated than what is indicated in both a gtf file and transcriptome file used in a pipeline that uses STAR for indexing/alignment and salmon for quantification.
 
 ## Problem description
 There seems to a problem where sequence lengths the SAM/BAM headers in the alignment files produced by the STAR aligner disagree with the lengths in annotation gtf/transcriptome files that are used for producing a index and in quantifying the alignments, respectively. This causes an error in the salmon aligner that looks like:  
