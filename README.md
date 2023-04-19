@@ -21,7 +21,7 @@ And for the bam file:
 `samtools view -H sample_Aligned.toTranscriptome.out.bam > bam_lengths.txt`
 
 ### Compare transcriptome lengths from the two sources.  
-**I'm still working on automating this step** but the gist is I want to match the sequench names between both files and find the transcripts that have different lengths in the two files and then export these "problem transcripts" to a file that can be used in the next step.
+**I'm still working on automating this step** but the gist is I want to match the sequence names between both files and find the transcripts that have different lengths in the two files and then export these "problem transcripts" to a file that can be used in the next step. The in-development code can be found in the sandbox/count_comparison.R code
 
 ### Subset the gtf file to exclude the transcripts with different lengths
 Next, I want to remove those problem transcripts from my annotations.gtf file. I can do that with a command like this:
